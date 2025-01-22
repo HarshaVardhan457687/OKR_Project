@@ -1,0 +1,19 @@
+<div class="role-selection-container">
+  <h1>Choose Your Role</h1>
+  <p class="subtitle">Select how you'd like to proceed today</p>
+
+  <div class="roles-grid">
+    <div class="role-card" *ngFor="let role of roles">
+      <div class="icon-circle">
+        <mat-icon>{{role.icon}}</mat-icon>
+      </div>
+      <h2>{{role.title}}</h2>
+      <p>{{role.description}}</p>
+      <button [class]="role.buttonClass" (click)="selectRole(role.title)">
+        {{role.action}}
+      </button>
+    </div>
+  </div>
+
+  <p class="footer-text">You can always change your role later in settings</p>
+</div> 
